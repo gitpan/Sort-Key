@@ -19,3 +19,4 @@ lib/Sort/Key/Natural.pm
 lib/Sort/Key/Register.pm
 lib/Sort/Key/Types.pm
 META.yml                                 Module meta-data (added by MakeMaker)
+META.json                                Module JSON meta-data (added by MakeMaker)
