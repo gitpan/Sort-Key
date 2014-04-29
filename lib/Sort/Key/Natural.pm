@@ -130,9 +130,8 @@ Sort::Key::Natural - fast natural sorting
 This module extends the L<Sort::Key> family of modules to support
 natural sorting.
 
-Under natural sorting, strings are splitted at word and number
-boundaries, and the resulting substrings
-are compared as follows:
+Under natural sorting, strings are split at word and number
+boundaries, and the resulting substrings are compared as follows:
 
 =over 4
 
@@ -166,13 +165,13 @@ be available from L<Sort::Key::Maker>. For instance:
   use Sort::Key::Natural;
   use Sort::Key::Maker i_rnat_keysort => qw(integer -natural);
 
-creates a multikey sorter C<i_rnat_keysort> accepting two keys, the
+creates a multi-key sorter C<i_rnat_keysort> accepting two keys, the
 first to be compared as an integer and the second in natural
 descending order.
 
 There is also an alternative set of natural sorting functions that
 recognize floating point numbers. They use the key type C<natwf>
-(abreviation of C<natural_with_floats>).
+(abbreviation of C<natural_with_floats>).
 
 =head2 FUNCTIONS
 
@@ -222,23 +221,23 @@ If the argument C<$key> is not provided it defaults to C<$_>.
 
 =item rnatwfsort @data
 
-=item natkeywfsort { CALC_KEY($_) } @data
+=item natwfkeysort { CALC_KEY($_) } @data
 
-=item rnatkeywfsort { CALC_KEY($_) } @data
+=item rnatwfkeysort { CALC_KEY($_) } @data
 
 =item natwfsort_inplace @data
 
 =item rnatwfsort_inplace @data
 
-=item natkeywfsort_inplace { CALC_KEY($_) } @data
+=item natwfkeysort_inplace { CALC_KEY($_) } @data
 
-=item rnatkeywfsort_inplace { CALC_KEY($_) } @data
+=item rnatwfkeysort_inplace { CALC_KEY($_) } @data
 
 =item mkkey_natural_with_floats $key
 
 this ugly named set of functions perform in the same way as its
 s/natwf/nat/ counterpart with the difference that they honor floating
-point numbers embeded inside the strings.
+point numbers embedded inside the strings.
 
 In this context a floating point number is a string matching the
 regular expression C</[+\-]?\d+(\.\d*)?/>. Note that numbers with an
@@ -257,7 +256,7 @@ Other module providing similar functionality is L<Sort::Naturally>.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2006, 2012 by Salvador FandiE<ntilde>o,
+Copyright (C) 2006, 2012, 2014 by Salvador FandiE<ntilde>o,
 E<lt>sfandino@yahoo.comE<gt>.
 
 This library is free software; you can redistribute it and/or modify
